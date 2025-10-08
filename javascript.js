@@ -5,7 +5,7 @@ const productos = [
     imagen: "img/tazacat.jpg",
     descripcion: "Taza de cerámica con orejitas y carita de gato pintada.",
     stock: 15,
-    precio: 12.99,
+    precio: 5000,
   },
   {
     id: 2,
@@ -13,12 +13,12 @@ const productos = [
     imagen: "img/mochicat.jpg",
     descripcion: "Mochila escolar con diseño kawaii de gatos.",
     stock: 10,
-    precio: 29.99
+    precio: 15000,
   },
   {
     id: 3,
-    nombre: "Cojín con cara de gato",
-    imagen: "https://example.com/images/cojin_gato.jpg",
+    nombre: "Almohada con cara de gato",
+    imagen: "img/almohada_2.jpg",
     descripcion: "Almohadón suave con ilustración realista de gato.",
     stock: 8,
     precio: 18.50
@@ -34,7 +34,7 @@ const productos = [
   {
     id: 5,
     nombre: "Pantuflas de gato",
-    imagen: "https://example.com/images/pantuflas_gato.jpg",
+    imagen: "img/pantuflas patas.jpg",
     descripcion: "Pantuflas peluditas con orejas y bigotes.",
     stock: 12,
     precio: 19.95
@@ -42,7 +42,7 @@ const productos = [
   {
     id: 6,
     nombre: "Lámpara LED de gato",
-    imagen: "https://example.com/images/lampara_gato.jpg",
+    imagen: "img/gatos luz.jpg",
     descripcion: "Lámpara nocturna de silicona con forma de gato.",
     stock: 9,
     precio: 22.00
@@ -98,7 +98,7 @@ const productos = [
   {
     id: 13,
     nombre: "Calcetines con huellitas de gato",
-    imagen: "https://example.com/images/calcetines_gato.jpg",
+    imagen: "img/medias gatos.jpg",
     descripcion: "Calcetines suaves con diseño de patas y caritas de gato.",
     stock: 22,
     precio: 7.90
