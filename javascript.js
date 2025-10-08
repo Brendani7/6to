@@ -1,165 +1,166 @@
 const productos = [
   {
     id: 1,
-    nombre: "Refrigerador Samsung RT32K",
-    imagen: "https://example.com/images/refrigerador1.jpg",
-    stock: 12,
-    descripcion: "Refrigerador de 320L con tecnología Twin Cooling Plus.",
-    precio: 599.99
+    nombre: "Taza con forma de gato",
+    imagen: "img/tazacat.jpg",
+    descripcion: "Taza de cerámica con orejitas y carita de gato pintada.",
+    stock: 15,
+    precio: 12.99,
   },
   {
     id: 2,
-    nombre: "Lavadora LG WF-T1400TP",
-    imagen: "https://example.com/images/lavadora1.jpg",
-    stock: 8,
-    descripcion: "Lavadora automática de 14 kg con motor Smart Inverter.",
-    precio: 449.99
+    nombre: "Mochila estampada de gatitos",
+    imagen: "img/mochicat.jpg",
+    descripcion: "Mochila escolar con diseño kawaii de gatos.",
+    stock: 10,
+    precio: 29.99
   },
   {
     id: 3,
-    nombre: "Microondas Panasonic NN-SD372S",
-    imagen: "https://example.com/images/microondas1.jpg",
-    stock: 20,
-    descripcion: "Microondas de 950W con sensor de cocción automática.",
-    precio: 129.99
+    nombre: "Cojín con cara de gato",
+    imagen: "https://example.com/images/cojin_gato.jpg",
+    descripcion: "Almohadón suave con ilustración realista de gato.",
+    stock: 8,
+    precio: 18.50
   },
   {
     id: 4,
-    nombre: "Aspiradora Dyson V11",
-    imagen: "https://example.com/images/aspiradora1.jpg",
-    stock: 5,
-    descripcion: "Aspiradora inalámbrica con pantalla LCD y 60 min de autonomía.",
-    precio: 699.99
+    nombre: "Anillo ajustable de gatito",
+    imagen: "https://example.com/images/anillo_gato.jpg",
+    descripcion: "Anillo de plata con forma de gato abrazando el dedo.",
+    stock: 20,
+    precio: 9.90
   },
   {
     id: 5,
-    nombre: "Televisor LG OLED 55''",
-    imagen: "https://example.com/images/tv1.jpg",
-    stock: 7,
-    descripcion: "Smart TV OLED 4K de 55 pulgadas con Dolby Vision IQ.",
-    precio: 1199.99
+    nombre: "Pantuflas de gato",
+    imagen: "https://example.com/images/pantuflas_gato.jpg",
+    descripcion: "Pantuflas peluditas con orejas y bigotes.",
+    stock: 12,
+    precio: 19.95
   },
   {
     id: 6,
-    nombre: "Cafetera Nespresso Essenza Mini",
-    imagen: "https://example.com/images/cafetera1.jpg",
-    stock: 25,
-    descripcion: "Cafetera compacta con sistema de cápsulas Nespresso.",
-    precio: 89.99
+    nombre: "Lámpara LED de gato",
+    imagen: "https://example.com/images/lampara_gato.jpg",
+    descripcion: "Lámpara nocturna de silicona con forma de gato.",
+    stock: 9,
+    precio: 22.00
   },
   {
     id: 7,
-    nombre: "Licuadora Oster Pro",
-    imagen: "https://example.com/images/licuadora1.jpg",
-    stock: 18,
-    descripcion: "Licuadora de alto rendimiento con vaso de vidrio resistente.",
-    precio: 74.50
+    nombre: "Bolso tote con ilustración de gatos",
+    imagen: "https://example.com/images/bolso_gato.jpg",
+    descripcion: "Bolsa de tela ecológica con estampado de gatos.",
+    stock: 25,
+    precio: 14.80
   },
   {
     id: 8,
-    nombre: "Horno eléctrico Mabe",
-    imagen: "https://example.com/images/horno1.jpg",
-    stock: 10,
-    descripcion: "Horno de 52L con múltiples funciones y temporizador.",
-    precio: 199.99
+    nombre: "Camisa con patrón de gatos",
+    imagen: "https://example.com/images/camisa_gato.jpg",
+    descripcion: "Camisa casual con pequeños gatitos estampados.",
+    stock: 6,
+    precio: 34.50
   },
   {
     id: 9,
-    nombre: "Plancha a vapor Philips GC5037",
-    imagen: "https://example.com/images/plancha1.jpg",
-    stock: 15,
-    descripcion: "Plancha potente con suela SteamGlide y función anti-goteo.",
-    precio: 79.90
+    nombre: "Set de stickers de gatos",
+    imagen: "https://example.com/images/stickers_gato.jpg",
+    descripcion: "Paquete con 50 stickers de gatitos adorables.",
+    stock: 40,
+    precio: 5.99
   },
   {
     id: 10,
-    nombre: "Ventilador de torre Honeywell HYF290",
-    imagen: "https://example.com/images/ventilador1.jpg",
-    stock: 22,
-    descripcion: "Ventilador silencioso con 8 niveles de velocidad.",
-    precio: 64.99
+    nombre: "Cuaderno de notas con portada de gato",
+    imagen: "https://example.com/images/cuaderno_gato.jpg",
+    descripcion: "Cuaderno A5 con portada ilustrada de gatito dormilón.",
+    stock: 30,
+    precio: 6.99
   },
   {
     id: 11,
-    nombre: "Aire acondicionado LG Dual Inverter",
-    imagen: "https://example.com/images/aire1.jpg",
-    stock: 6,
-    descripcion: "A/C de 12,000 BTU con ahorro energético y Wi-Fi integrado.",
-    precio: 749.00
+    nombre: "Collar con dije de gato",
+    imagen: "https://example.com/images/collar_gato.jpg",
+    descripcion: "Cadena dorada con colgante en forma de gato.",
+    stock: 14,
+    precio: 11.50
   },
   {
     id: 12,
-    nombre: "Freidora de aire Ninja AF101",
-    imagen: "https://example.com/images/freidora1.jpg",
-    stock: 30,
-    descripcion: "Freidora de aire de 3.8L para cocinar sin aceite.",
-    precio: 129.00
+    nombre: "Pendientes de orejitas de gato",
+    imagen: "https://example.com/images/pendientes_gato.jpg",
+    descripcion: "Aretes pequeños en forma de orejas felinas.",
+    stock: 18,
+    precio: 8.25
   },
   {
     id: 13,
-    nombre: "Tostadora Black+Decker TR3500SD",
-    imagen: "https://example.com/images/tostadora1.jpg",
-    stock: 14,
-    descripcion: "Tostadora de acero inoxidable con ranuras extra anchas.",
-    precio: 39.95
+    nombre: "Calcetines con huellitas de gato",
+    imagen: "https://example.com/images/calcetines_gato.jpg",
+    descripcion: "Calcetines suaves con diseño de patas y caritas de gato.",
+    stock: 22,
+    precio: 7.90
   },
   {
     id: 14,
-    nombre: "Batidora de mano Braun MQ7035X",
-    imagen: "https://example.com/images/batidora1.jpg",
-    stock: 11,
-    descripcion: "Batidora con tecnología ActiveBlade y múltiples accesorios.",
-    precio: 99.90
+    nombre: "Reloj de pared con gato",
+    imagen: "https://example.com/images/reloj_gato.jpg",
+    descripcion: "Reloj decorativo con forma de gato y movimiento de cola.",
+    stock: 7,
+    precio: 24.99
   },
   {
     id: 15,
-    nombre: "Extractor de jugos Philips Viva",
-    imagen: "https://example.com/images/extractor1.jpg",
-    stock: 9,
-    descripcion: "Extractor centrífugo de alta velocidad y fácil limpieza.",
-    precio: 119.00
+    nombre: "Estuche escolar de gatito",
+    imagen: "https://example.com/images/estuche_gato.jpg",
+    descripcion: "Estuche con orejitas y cierre decorado.",
+    stock: 16,
+    precio: 9.99
   },
   {
     id: 16,
-    nombre: "Secadora Whirlpool 7MWGD1730JW",
-    imagen: "https://example.com/images/secadora1.jpg",
-    stock: 4,
-    descripcion: "Secadora a gas de 17 kg con 12 ciclos automáticos.",
-    precio: 659.99
+    nombre: "Pijama con estampado de gatos",
+    imagen: "https://example.com/images/pijama_gato.jpg",
+    descripcion: "Pijama de algodón con diseño divertido de gatos.",
+    stock: 13,
+    precio: 27.50
   },
   {
     id: 17,
-    nombre: "Lava vajillas Bosch Serie 4",
-    imagen: "https://example.com/images/lavavajillas1.jpg",
-    stock: 5,
-    descripcion: "Lavavajillas silencioso con eficiencia energética A++.",
-    precio: 799.00
+    nombre: "Paraguas con gatos ilustrados",
+    imagen: "https://example.com/images/paraguas_gato.jpg",
+    descripcion: "Paraguas plegable con dibujos de gatitos en la tela.",
+    stock: 11,
+    precio: 17.00
   },
   {
     id: 18,
-    nombre: "Enfriador de aire portátil Honeywell",
-    imagen: "https://example.com/images/enfriador1.jpg",
-    stock: 13,
-    descripcion: "Enfriador evaporativo con control remoto y ruedas.",
-    precio: 199.00
+    nombre: "Portavasos de silicona gato",
+    imagen: "https://example.com/images/portavasos_gato.jpg",
+    descripcion: "Set de posavasos con forma de cara de gato.",
+    stock: 20,
+    precio: 6.75
   },
   {
     id: 19,
-    nombre: "Robot aspirador Xiaomi Mi Robot Vacuum",
-    imagen: "https://example.com/images/robot1.jpg",
+    nombre: "Camiseta con frase gatuna",
+    imagen: "https://example.com/images/camiseta_gato.jpg",
+    descripcion: "T-shirt con ilustración y frase: 'Soy un gato en otra vida'.",
     stock: 10,
-    descripcion: "Aspirador inteligente con navegación láser y app.",
-    precio: 399.00
+    precio: 16.99
   },
   {
     id: 20,
-    nombre: "Parrilla eléctrica George Foreman",
-    imagen: "https://example.com/images/parrilla1.jpg",
-    stock: 17,
-    descripcion: "Parrilla eléctrica antiadherente para interior.",
-    precio: 59.95
+    nombre: "Funda de celular con orejas de gato",
+    imagen: "https://example.com/images/funda_gato.jpg",
+    descripcion: "Funda protectora con diseño de gatito kawaii.",
+    stock: 15,
+    precio: 13.20
   }
 ];
+
 
 function cargarproductos() {
     for (let producto of productos) {
@@ -167,9 +168,9 @@ function cargarproductos() {
         parrafo.id = "boxproducto"
         parrafo.innerHTML= `
                     <h2 id="nombreproducto">${producto.nombre}</h2>
-                    <img src="" alt="" id="imagenproducto">
+                    <img src="${producto.imagen}" alt="" id="imagenproducto">
                     <h3 id="precioproducto">${producto.precio}</h3>
-                    <button id="btncomprar">ver</button>
+                    <button id="btncomprar" onclick="verdetalle(${producto.id})">ver</button>
         `
         document.getElementById("boxproductos").appendChild(parrafo)
     }
@@ -177,3 +178,10 @@ function cargarproductos() {
 }
 
 cargarproductos()
+
+function verdetalle(id) {
+  let productoseleccionado = productos.find(producto => producto.id == id)
+  let productojon = JSON.stringify(productoseleccionado)
+  localStorage.setItem("Detalle", productojon)
+  window.location.href = "detalle.html"
+}
