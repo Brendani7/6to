@@ -12,6 +12,49 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+/* Decoración lateral con patron.jpg */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background-image: url('img/patron.jpg');
+    background-repeat: repeat-y;
+    background-size: contain;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before {
+    left: 0;
+    background-position: left center;
+}
+
+body::after {
+    right: 0;
+    background-position: right center;
+}
+
+/* Contenedor principal para que el contenido no se superponga */
+header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Opcional: Añadir margen en pantallas grandes */
+@media (min-width: 1400px) {
+    body::before,
+    body::after {
+        width: 200px;
+    }
 }
 
 /* HEADER */
