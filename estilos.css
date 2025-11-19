@@ -1,6 +1,9 @@
 /* Reset básico */
 @import url(https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap);
 
+b{
+    background-color: #2d2422;
+}
 h1{
     font-family: "Rammetto One", sans-serif;
 }

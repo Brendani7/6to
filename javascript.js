@@ -17,19 +17,19 @@ const productos = [
   },
   {
     id: 3,
-    nombre: "Almohada con cara de gato",
+    nombre: "Almohada con forma de huella de gato",
     imagen: "img/almohada_2.jpg",
     descripcion: "Almohadón suave con ilustración realista de gato.",
     stock: 8,
-    precio: 18.50
+    precio: 10000,
   },
   {
     id: 4,
-    nombre: "Anillo ajustable de gatito",
-    imagen: "https://example.com/images/anillo_gato.jpg",
-    descripcion: "Anillo de plata con forma de gato abrazando el dedo.",
+    nombre: "Almohada con forma de gato galleta de Steven Universe",
+    imagen: "img/gatogalleta.jpg",
+    descripcion: "Almohadón suave con ilustración de una galleta con forma de gato.",
     stock: 20,
-    precio: 9.90
+    precio: 10000,
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const productos = [
     imagen: "img/pantuflas patas.jpg",
     descripcion: "Pantuflas peluditas con orejas y bigotes.",
     stock: 12,
-    precio: 19.95
+    precio: 12000,
   },
   {
     id: 6,
@@ -45,120 +45,48 @@ const productos = [
     imagen: "img/gatos luz.jpg",
     descripcion: "Lámpara nocturna de silicona con forma de gato.",
     stock: 9,
-    precio: 22.00
+    precio: 22000,
   },
   {
     id: 7,
-    nombre: "Bolso tote con ilustración de gatos",
-    imagen: "https://example.com/images/bolso_gato.jpg",
-    descripcion: "Bolsa de tela ecológica con estampado de gatos.",
+    nombre: "Lámpara LED de gato de multiples colores",
+    imagen: "img/gato lampara.jpg",
+    descripcion: "Lámpara nocturna de silicona con forma de gato de multiples colores.",
     stock: 25,
-    precio: 14.80
+    precio: 22000,
   },
   {
     id: 8,
-    nombre: "Camisa con patrón de gatos",
-    imagen: "https://example.com/images/camisa_gato.jpg",
-    descripcion: "Camisa casual con pequeños gatitos estampados.",
+    nombre: "Almuhada con forma de huella de gato con pelo sintetico",
+    imagen: "img/almohada_1.jpg",
+    descripcion: "Almuadón de patita pero hecho de pelo sintetico.",
     stock: 6,
-    precio: 34.50
+    precio: 12000,
   },
   {
     id: 9,
-    nombre: "Set de stickers de gatos",
-    imagen: "https://example.com/images/stickers_gato.jpg",
-    descripcion: "Paquete con 50 stickers de gatitos adorables.",
-    stock: 40,
-    precio: 5.99
+    nombre: "Silla Gatuna",
+    imagen: "img/silla gatuna.jpg",
+    descripcion: "Una silla con forma de patita de gato.",
+    stock: 14,
+    precio: 20000,
   },
   {
     id: 10,
-    nombre: "Cuaderno de notas con portada de gato",
-    imagen: "https://example.com/images/cuaderno_gato.jpg",
-    descripcion: "Cuaderno A5 con portada ilustrada de gatito dormilón.",
-    stock: 30,
-    precio: 6.99
-  },
-  {
-    id: 11,
-    nombre: "Collar con dije de gato",
-    imagen: "https://example.com/images/collar_gato.jpg",
-    descripcion: "Cadena dorada con colgante en forma de gato.",
-    stock: 14,
-    precio: 11.50
-  },
-  {
-    id: 12,
-    nombre: "Pendientes de orejitas de gato",
-    imagen: "https://example.com/images/pendientes_gato.jpg",
-    descripcion: "Aretes pequeños en forma de orejas felinas.",
-    stock: 18,
-    precio: 8.25
-  },
-  {
-    id: 13,
     nombre: "Calcetines con huellitas de gato",
     imagen: "img/medias gatos.jpg",
     descripcion: "Calcetines suaves con diseño de patas y caritas de gato.",
     stock: 22,
-    precio: 7.90
+    precio: 8000,
   },
   {
-    id: 14,
-    nombre: "Reloj de pared con gato",
-    imagen: "https://example.com/images/reloj_gato.jpg",
-    descripcion: "Reloj decorativo con forma de gato y movimiento de cola.",
-    stock: 7,
-    precio: 24.99
-  },
-  {
-    id: 15,
-    nombre: "Estuche escolar de gatito",
-    imagen: "https://example.com/images/estuche_gato.jpg",
-    descripcion: "Estuche con orejitas y cierre decorado.",
-    stock: 16,
-    precio: 9.99
-  },
-  {
-    id: 16,
-    nombre: "Pijama con estampado de gatos",
-    imagen: "https://example.com/images/pijama_gato.jpg",
-    descripcion: "Pijama de algodón con diseño divertido de gatos.",
-    stock: 13,
-    precio: 27.50
-  },
-  {
-    id: 17,
-    nombre: "Paraguas con gatos ilustrados",
-    imagen: "https://example.com/images/paraguas_gato.jpg",
-    descripcion: "Paraguas plegable con dibujos de gatitos en la tela.",
-    stock: 11,
-    precio: 17.00
-  },
-  {
-    id: 18,
-    nombre: "Portavasos de silicona gato",
-    imagen: "https://example.com/images/portavasos_gato.jpg",
-    descripcion: "Set de posavasos con forma de cara de gato.",
-    stock: 20,
-    precio: 6.75
-  },
-  {
-    id: 19,
-    nombre: "Camiseta con frase gatuna",
-    imagen: "https://example.com/images/camiseta_gato.jpg",
-    descripcion: "T-shirt con ilustración y frase: 'Soy un gato en otra vida'.",
+    id: 11,
+    nombre: "Pantuflas de Toro Inoue",
+    imagen: "img/pantuflas toro.jpg",
+    descripcion: "Unas bonitas pantuflas de Toro.",
     stock: 10,
-    precio: 16.99
+    precio: 12000,
   },
-  {
-    id: 20,
-    nombre: "Funda de celular con orejas de gato",
-    imagen: "https://example.com/images/funda_gato.jpg",
-    descripcion: "Funda protectora con diseño de gatito kawaii.",
-    stock: 15,
-    precio: 13.20
-  }
 ];
 
 

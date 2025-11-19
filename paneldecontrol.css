@@ -1,0 +1,432 @@
+/* Reset básico */
+
+@import url(https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    color:#2d2422;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdf6ec 0%, #fff8f0 100%);
+    color: #3c3c3c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Decoración lateral con patron.jpg */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    background-image: url('patron.jpg');
+    background-repeat: repeat-y;
+    background-size: contain;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before {
+    left: 0;
+    background-position: left center;
+}
+
+body::after {
+    right: 0;
+    background-position: right center;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #5c4438 0%, #6d5347 100%);
+    color: #fff8f0;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '🐾';
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.05;
+    right: -20px;
+    top: -30px;
+    transform: rotate(-15deg);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header h1::after {
+    content: '=ᗢ='; /* ᓚᘏᗢ */
+    font-size: 2rem;
+    animation: pawBounce 2s ease-in-out infinite;
+}
+
+@keyframes pawBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+}
+
+nav ul li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 0;
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fbbf77;
+    transition: width 0.3s ease;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+nav ul li:hover {
+    color: #fbbf77;
+    transform: translateY(-2px);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* PANEL DE CONTROL */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+main > div {
+    background: linear-gradient(145deg, #ffffff 0%, #fff8f0 100%);
+    max-width: 650px;
+    width: 100%;
+    padding: 45px 50px;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(92, 68, 56, 0.15);
+    position: relative;
+    animation: fadeIn 0.5s ease-out;
+}
+
+main > div::before {
+    content: '😺';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    background: linear-gradient(135deg, #5c4438 0%, #6d5347 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+main > div::after {
+    content: '🐱';
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 4rem;
+    opacity: 0.06;
+}
+
+/* Título del panel */
+main > div::first-line {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #5c4438;
+    text-align: center;
+    display: block;
+}
+
+main > div > *:first-child {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #5c4438;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+}
+
+/* Formulario */
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #50332c;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+label::before {
+    content: '🐾 ';
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 50%;
+    padding: 14px 16px;
+    border: 2px solid #e6dcd4;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #3c3c3c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    background-color: #fefefe;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #b35d4c;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(179, 93, 76, 0.1);
+    transform: translateY(-2px);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+/* Input de archivo personalizado */
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #b79573;
+    border-radius: 12px;
+    background-color: #fdf6ec;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+input[type="file"]:hover {
+    border-color: #a36d55;
+    background-color: #fff8f0;
+}
+
+input[type="file"]::file-selector-button {
+    background: linear-gradient(135deg, #b79573 0%, #a18165 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: linear-gradient(135deg, #a18165 0%, #8f704e 100%);
+    transform: translateY(-2px);
+}
+
+/* Botón agregar producto */
+#agregarProducto {
+    width: 100%;
+    background: linear-gradient(135deg, #e4a672 0%, #cc8d5b 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 8px 24px rgba(228, 166, 114, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#agregarProducto::before {
+    content: '🐾';
+    font-size: 1.4rem;
+}
+
+#agregarProducto:hover {
+    background: linear-gradient(135deg, #cc8d5b 0%, #b37a4d 100%);
+    box-shadow: 0 10px 30px rgba(204, 141, 91, 0.6);
+    transform: translateY(-3px);
+}
+
+#agregarProducto:active {
+    transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #3a2e2c 0%, #2d2422 100%);
+    color: #f1e7df;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+footer h3 {
+    font-family: 'Rammetto One', cursive;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer::after {
+    content: ' 🐾';
+    font-size: 1.5rem;
+    display: inline-block;
+    animation: pawBounce 2s ease-in-out infinite;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* Ocultar decoraciones laterales en móviles */
+    body::before,
+    body::after {
+        display: none;
+    }
+
+    header {
+        padding: 20px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 80px 15px 30px;
+    }
+
+    main > div {
+        padding: 45px 25px;
+    }
+
+    main > div::before {
+        top: -40px;
+        font-size: 4rem;
+        width: 80px;
+        height: 80px;
+    }
+
+    main > div > *:first-child {
+        font-size: 1.6rem;
+        margin-top: 15px;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+        font-size: 0.95rem;
+    }
+
+    #agregarProducto {
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+}
+
+@media (min-width: 1400px) {
+    body::before,
+    body::after {
+        width: 200px;
+    }
+}
