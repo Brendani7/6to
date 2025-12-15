@@ -1,4 +1,4 @@
-const productos = [
+/* const productos = [
   {
     id: 1,
     nombre: "Taza con forma de gato",
@@ -11,7 +11,7 @@ const productos = [
     id: 2,
     nombre: "Mochila estampada de gatitos",
     imagen: "img/mochicat.jpg",
-    descripcion: "Mochila escolar con diseño kawaii de gatos.",
+    descripcion: "Mochila escolar con diseño de gatos en ella.",
     stock: 10,
     precio: 8000,
   },
@@ -19,7 +19,7 @@ const productos = [
     id: 3,
     nombre: "Almohada de huella de gato",
     imagen: "img/almohada_2.jpg",
-    descripcion: "Almohadón suave con ilustración realista de gato.",
+    descripcion: "Almohadón suave con huella de gato.",
     stock: 8,
     precio: 5500,
   },
@@ -184,4 +184,60 @@ function verdetalle(id) {
   let productojon = JSON.stringify(productoseleccionado)
   localStorage.setItem("Detalle", productojon)
   window.location.href = "detalle.html"
+} */
+
+
+// 🔥 IMPORTS DESDE CDN (OBLIGATORIO)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// 🔥 CONFIGURACIÓN FIREBASE
+const firebaseConfig = {
+  apiKey: "AIzaSyBE2zDFrP6w7unIrKP9UlBfE0YQOXg2cTQ",
+  authDomain: "meow-872d8.firebaseapp.com",
+  projectId: "meow-872d8",
+  storageBucket: "meow-872d8.firebasestorage.app",
+  messagingSenderId: "808981780776",
+  appId: "1:808981780776:web:536a91b9940b632e1bd81d"
+};
+
+// 🔥 INICIALIZAR FIREBASE
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// 🔥 ARRAY GLOBAL PARA USAR EN DETALLE
+let productos = [];
+
+// 🔥 CARGAR PRODUCTOS DESDE FIRESTORE
+async function cargarProductos() {
+  const contenedor = document.getElementById("boxproductos");
+  contenedor.innerHTML = "";
+
+  const querySnapshot = await getDocs(collection(db, "productos"));
+
+  querySnapshot.forEach((doc) => {
+    const producto = doc.data();
+    productos.push(producto);
+
+    const div = document.createElement("div");
+    div.id = "boxproducto";
+    div.innerHTML = `
+      <h2>${producto.nombre}</h2>
+      <img src="${producto.imagen}" width="150">
+      <h3>$${producto.precio}</h3>
+      <button onclick="verDetalle(${producto.id})">Ver</button>
+    `;
+
+    contenedor.appendChild(div);
+  });
 }
+
+// 🔥 VER DETALLE
+window.verDetalle = function(id) {
+  const producto = productos.find(p => p.id === id);
+  localStorage.setItem("Detalle", JSON.stringify(producto));
+  window.location.href = "detalle.html";
+};
+
+// 🔥 EJECUTAR
+cargarProductos();
