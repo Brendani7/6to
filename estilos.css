@@ -1,8 +1,20 @@
 /* Reset básico */
 @import url(https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap);
 
+#totalgastos{
+    font-size: 30px;
+    font-weight: 10px;
+    color: #ffffff;
+    display: flex;
+    margin: 50px;
+    padding: 30px;
+    justify-content: center;
+    background-color: #3a2e2c;
+    border-radius: 30px;
+}
+
 b{
-    background-color: #2d2422;
+    background-color: #ffffff;
 }
 h1{
     font-family: "Rammetto One", sans-serif;
@@ -52,7 +64,8 @@ body::after {
 /* Contenedor principal para que el contenido no se superponga */
 header,
 main,
-footer {
+footer,
+section {
     position: relative;
     z-index: 1;
 }
@@ -146,6 +159,89 @@ nav ul li:hover {
 nav ul li a {
     text-decoration: none;
     color: inherit;
+}
+
+/* HERO SECTION - Menú de Bienvenida */
+.hero-welcome {
+    background: linear-gradient(145deg, #978c8c 0%, #5c4438 100%);
+    margin: 40px auto;
+    max-width: 1200px;
+    width: 90%;
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(92, 68, 56, 0.15);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-welcome::before {
+    content: '₊˚ʚ ᗢ₊˚✧ ﾟ.';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    font-size: 12rem;
+    opacity: 0.08;
+    transform: rotate(-25deg);
+}
+
+.hero-welcome::after {
+    content: '/ᐠ - ˕ -マ Ⳋ';
+    color: #383532;
+    position: absolute;
+    bottom: -5px;
+    right: 4px;
+    font-size: 10rem;
+    opacity: 0.13;
+    /* transform: rotate(25deg); */
+}
+
+.hero-welcome h2 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    animation: pawBounce 2s ease-in-out infinite;
+}
+
+.hero-welcome p {
+    /* font-family: "Press Start 2P", system-ui;
+    font-weight: 20px;
+    font-style: normal; */
+    font-size: 1.3rem;
+    color: #a79d9d;
+    margin-bottom: 35px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.nyan-container {
+    margin: 40px 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nyan-container img {
+    animation: pawBounce 0.35s ease-in-out infinite;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+    /* background: linear-gradient(135deg, #978c8c 0%, #5c4438 100%); */
+    padding: 20px;
 }
 
 /* MAIN - Formulario de inicio de sesión */
@@ -300,6 +396,28 @@ a:hover {
 
 /* Estilos para los productos (sección de productos) */
 main#boxproductos {
+    padding: 40px 30px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+/* Vista de LISTADO - cuando hay múltiples productos */
+main#boxproductos:not(:has(#boxproducto:only-child)) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+}
+
+/* Vista de DETALLE - cuando hay un solo producto */
+main#boxproductos:has(#boxproducto:only-child) {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+/* // Estilos para los productos (sección de productos)
+main#boxproductos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
@@ -307,7 +425,7 @@ main#boxproductos {
     max-width: 1300px;
     margin: 0 auto;
     flex-grow: 1;
-}
+} */
 
 #boxproducto {
     background: linear-gradient(145deg, #ffffff 0%, #fefcfa 100%);
@@ -408,12 +526,12 @@ main#boxproductos {
     box-shadow: 0 6px 18px rgba(163, 109, 85, 0.4);
 }
 
-/* Contenedor de productos - Vista detalle */
+/* // Contenedor de productos - Vista detalle
 #boxproductos {
     max-width: 450px;
     margin: 50px auto;
     padding: 0 20px;
-}
+} */
 
 /* Caja individual del producto - Vista detalle */
 #boxproducto {
@@ -646,6 +764,24 @@ td img {
         font-size: 0.9rem;
     }
 
+    /* Hero Welcome Responsive */
+    .hero-welcome {
+        padding: 40px 25px;
+        margin: 20px auto;
+    }
+
+    .hero-welcome h2 {
+        font-size: 2rem;
+    }
+
+    .hero-welcome p {
+        font-size: 1.1rem;
+    }
+
+    .nyan-container img {
+        max-width: 300px;
+    }
+
     main#boxproductos {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
@@ -714,6 +850,10 @@ td img {
     animation: fadeIn 0.5s ease-out;
 }
 
+.hero-welcome {
+    animation: fadeIn 0.8s ease-out;
+}
+
 /* Efecto de carga para imágenes */
 #imagenproducto {
     background: linear-gradient(90deg, #f0eae2 25%, #f6f3ef 50%, #f0eae2 75%);
@@ -721,11 +861,11 @@ td img {
     animation: shimmer 1.5s infinite;
 }
 
-@keyframes shimmer {
+/* @keyframes shimmer {
     0% {
         background-position: -200% 0;
     }
     100% {
         background-position: 200% 0;
     }
-}
+} */
